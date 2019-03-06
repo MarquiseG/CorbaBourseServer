@@ -1,0 +1,17 @@
+
+module bourse{
+
+    struct CCotation{
+
+        long long numCotation;
+        string dateCotation;
+        double valAction;
+        string codeSociete;
+    };
+
+    typedef sequence <CCotation> cots;
+    interface Bourse{
+        cots getCotations(in string cs);
+        double getMoyennesCotations(in string cs);
+   };
+};
